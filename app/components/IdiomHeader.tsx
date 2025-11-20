@@ -2,8 +2,7 @@
 import React from "react"
 import Image from "next/image"
 import { useRouter } from "next/navigation"
-
-const LOCALES = ["es", "en", "br", "fr", "ita"]
+import { LOCALES } from "@/constants/locales"
 
 export default function IdiomHeader() {
     const router = useRouter()
@@ -15,8 +14,9 @@ export default function IdiomHeader() {
 
         document.cookie = `NEXT_LOCALE=${pendingLocale}; Path=/; Max-Age=${60 * 60 * 24 * 365}; SameSite=Lax`
 
+        const localeRegex = new RegExp(`^/(${LOCALES.join("|")})(?=/|$)`)
         const pathname = window.location.pathname.replace(
-            /^\/(es|en|be|fr|ita)(?=\/|$)/,
+            localeRegex,
             ""
         )
 

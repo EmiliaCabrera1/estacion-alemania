@@ -1,11 +1,8 @@
 import type { Metadata } from "next";
-import { Alumni_Sans_SC, Be_Vietnam_Pro } from "next/font/google"
+import { Be_Vietnam_Pro } from "next/font/google"
+import IdiomHeader from "./components/IdiomHeader";
 import "./globals.css";
 
-export const alumniSans = Alumni_Sans_SC({
-  subsets: ["latin"],
-  variable: "--font-alumni-sans",
-})
 
 export const beVietnam = Be_Vietnam_Pro({
   weight: "400",
@@ -27,9 +24,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${alumniSans.variable} ${beVietnam.variable} antialiased font-vietnam`}
+        className={`${beVietnam.variable} antialiased font-vietnam`}
       >
-        {children}
+        <main>
+          <IdiomHeader />
+          {children}
+        </main>
       </body>
     </html>
   );

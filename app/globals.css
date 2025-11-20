@@ -8,7 +8,7 @@
 
 @theme inline {
   --font-vietnam: var(--font-be-vietnam), ui-sans-serif, system-ui, sans-serif;
-  --font-alumni: var(--font-alumni-sans), sans-serif;
+  --font-alumni: "Alumni Sans SC", sans-serif;
   --color-card-text: var(--gris);
   --color-card-background: var(--verde-oliva);
 }
