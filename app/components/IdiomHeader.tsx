@@ -30,7 +30,7 @@ export default function IdiomHeader() {
     }
 
     return (
-        <div className="fixed top-4 right-4 flex gap-2 z-50">
+        <div className="absolut flex gap-2 z-50 w-full justify-end p-4">
             {LOCALES.map((idiom) => (
                 <button
                     key={idiom}
