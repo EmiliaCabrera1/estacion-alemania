@@ -1,3 +1,4 @@
+export type Categoria = "cafeteria" | "bebidas" | "regional" | "carnes" | "pastas" | "postres";
 export const CATEGORIAS = {
     es: {
         cafeteria: "Cafetería",

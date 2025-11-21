@@ -1,0 +1,72 @@
+[
+  {
+    "titulo": "Café con leche",
+    "descripcion": "Café espresso con leche vaporizada, servido caliente",
+    "precio": 350,
+    "vegetariano": true,
+    "sinTacc": true
+  },
+  {
+    "titulo": "Capuchino",
+    "descripcion": "Espresso, espuma de leche y cacao espolvoreado",
+    "precio": 420,
+    "vegetariano": true,
+    "sinTacc": true
+  },
+  {
+    "titulo": "Medialuna",
+    "descripcion": "Medialuna hojaldrada recién horneada",
+    "precio": 180,
+    "vegetariano": true,
+    "sinTacc": false
+  },
+  {
+    "titulo": "Tostadas con manteca",
+    "descripcion": "Rebanadas de pan artesanal con manteca",
+    "precio": 240,
+    "vegetariano": true,
+    "sinTacc": false
+  },
+  {
+    "titulo": "Sándwich de jamón y queso",
+    "descripcion": "Pan de miga, jamón, queso y tomate",
+    "precio": 650,
+    "vegetariano": false,
+    "sinTacc": false
+  },
+  {
+    "titulo": "Tostada con palta",
+    "descripcion": "Pan integral tostado con puré de palta y limón",
+    "precio": 520,
+    "vegetariano": true,
+    "sinTacc": false
+  },
+  {
+    "titulo": "Yogur con granola",
+    "descripcion": "Yogur natural, granola crocante y miel",
+    "precio": 480,
+    "vegetariano": true,
+    "sinTacc": true
+  },
+  {
+    "titulo": "Budín de limón",
+    "descripcion": "Porción de budín casero con glaseado de limón",
+    "precio": 300,
+    "vegetariano": true,
+    "sinTacc": false
+  },
+  {
+    "titulo": "Infusión de hierbas",
+    "descripcion": "Selección de té de menta, manzanilla o té rojo",
+    "precio": 250,
+    "vegetariano": true,
+    "sinTacc": true
+  },
+  {
+    "titulo": "Café helado",
+    "descripcion": "Café espresso con hielo y leche, endulzado al gusto",
+    "precio": 420,
+    "vegetariano": true,
+    "sinTacc": true
+  }
+]

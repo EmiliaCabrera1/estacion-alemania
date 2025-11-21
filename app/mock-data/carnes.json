@@ -1,0 +1,72 @@
+[
+  {
+    "titulo": "Milanesa clásica",
+    "descripcion": "Milanesa de carne apanada, servida con limón",
+    "precio": 13500,
+    "vegetariano": false,
+    "sinTacc": false
+  },
+  {
+    "titulo": "Bife de chorizo",
+    "descripcion": "Bife de chorizo a la parrilla, punto a elección",
+    "precio": 18500,
+    "vegetariano": false,
+    "sinTacc": true
+  },
+  {
+    "titulo": "Ojo de bife",
+    "descripcion": "Corte premium a la plancha, acompañado de papas",
+    "precio": 22500,
+    "vegetariano": false,
+    "sinTacc": true
+  },
+  {
+    "titulo": "Bondiola braseada",
+    "descripcion": "Bondiola cocida lentamente con reducción de vino",
+    "precio": 13200,
+    "vegetariano": false,
+    "sinTacc": false
+  },
+  {
+    "titulo": "Costillas BBQ",
+    "descripcion": "Costillas glaseadas con salsa barbacoa casera",
+    "precio": 16800,
+    "vegetariano": false,
+    "sinTacc": false
+  },
+  {
+    "titulo": "Hamburguesa casera",
+    "descripcion": "Hamburguesa de carne vacuna con toppings a elección",
+    "precio": 9800,
+    "vegetariano": false,
+    "sinTacc": false
+  },
+  {
+    "titulo": "Entraña a la parrilla",
+    "descripcion": "Entraña sazonada y asada al carbón",
+    "precio": 14200,
+    "vegetariano": false,
+    "sinTacc": true
+  },
+  {
+    "titulo": "Mollejas salteadas",
+    "descripcion": "Mollejas doradas con limón y perejil",
+    "precio": 12500,
+    "vegetariano": false,
+    "sinTacc": false
+  },
+  {
+    "titulo": "Pollo al horno",
+    "descripcion": "Pechuga de pollo marinada y horneada",
+    "precio": 9200,
+    "vegetariano": false,
+    "sinTacc": false
+  },
+  {
+    "titulo": "Albóndigas caseras",
+    "descripcion": "Albóndigas de carne en salsa de tomate",
+    "precio": 8600,
+    "vegetariano": false,
+    "sinTacc": false
+  }
+]

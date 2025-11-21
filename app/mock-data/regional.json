@@ -1,0 +1,72 @@
+[
+  {
+    "titulo": "Empanada salteña",
+    "descripcion": "Empanada artesanal rellena de carne, papa y condimentos",
+    "precio": 260,
+    "vegetariano": false,
+    "sinTacc": false
+  },
+  {
+    "titulo": "Humita en chala",
+    "descripcion": "Pastel de maíz cremoso envuelto en chala",
+    "precio": 420,
+    "vegetariano": true,
+    "sinTacc": false
+  },
+  {
+    "titulo": "Locro chico",
+    "descripcion": "Porción de locro tradicional con maíz y zapallo",
+    "precio": 890,
+    "vegetariano": false,
+    "sinTacc": false
+  },
+  {
+    "titulo": "Tamal regional",
+    "descripcion": "Tamal de pollo y especias, preparación casera",
+    "precio": 520,
+    "vegetariano": false,
+    "sinTacc": false
+  },
+  {
+    "titulo": "Milanesa a la napolitana",
+    "descripcion": "Milanesa cubierta con salsa de tomate y queso gratinado",
+    "precio": 13500,
+    "vegetariano": false,
+    "sinTacc": false
+  },
+  {
+    "titulo": "Pizza tarteta regional",
+    "descripcion": "Tarta con ingredientes locales y masa casera",
+    "precio": 760,
+    "vegetariano": true,
+    "sinTacc": false
+  },
+  {
+    "titulo": "Asado a la estaca (porción)",
+    "descripcion": "Porción de asado cocinado al estilo regional",
+    "precio": 2200,
+    "vegetariano": false,
+    "sinTacc": false
+  },
+  {
+    "titulo": "Sopa paraguaya (porción)",
+    "descripcion": "Torta salada de maíz y queso, estilo regional",
+    "precio": 480,
+    "vegetariano": false,
+    "sinTacc": false
+  },
+  {
+    "titulo": "Choclo con manteca",
+    "descripcion": "Choclo hervido servido con manteca",
+    "precio": 300,
+    "vegetariano": true,
+    "sinTacc": true
+  },
+  {
+    "titulo": "Dulce de cayote con queso",
+    "descripcion": "Postre regional: cayote cocido con queso",
+    "precio": 420,
+    "vegetariano": true,
+    "sinTacc": false
+  }
+]

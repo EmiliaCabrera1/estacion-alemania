@@ -1,0 +1,72 @@
+[
+  {
+    "titulo": "Ravioles de ricota",
+    "descripcion": "Ravioles rellenos de ricota y espinaca, salsa fileto",
+    "precio": 1150,
+    "vegetariano": true,
+    "sinTacc": false
+  },
+  {
+    "titulo": "Ñoquis caseros",
+    "descripcion": "Ñoquis de papa con salsa a elección",
+    "precio": 980,
+    "vegetariano": true,
+    "sinTacc": false
+  },
+  {
+    "titulo": "Spaghetti al pesto",
+    "descripcion": "Spaghetti con salsa pesto de albahaca y parmesano",
+    "precio": 1050,
+    "vegetariano": true,
+    "sinTacc": false
+  },
+  {
+    "titulo": "Fetuccine a la bolognesa",
+    "descripcion": "Fetuccine con salsa bolognesa de carne",
+    "precio": 1320,
+    "vegetariano": false,
+    "sinTacc": false
+  },
+  {
+    "titulo": "Lasagna de carne",
+    "descripcion": "Capas de pasta, carne, salsa blanca y queso gratinado",
+    "precio": 1450,
+    "vegetariano": false,
+    "sinTacc": false
+  },
+  {
+    "titulo": "Tallarines con salsa de hongos",
+    "descripcion": "Tallarines salteados con crema y champiñones",
+    "precio": 1180,
+    "vegetariano": true,
+    "sinTacc": false
+  },
+  {
+    "titulo": "Canelones rellenos",
+    "descripcion": "Canelones caseros gratinados con salsa fileto",
+    "precio": 1290,
+    "vegetariano": false,
+    "sinTacc": false
+  },
+  {
+    "titulo": "Pasta al limón",
+    "descripcion": "Pasta ligera con salsa cremosa de limón y parmesano",
+    "precio": 990,
+    "vegetariano": true,
+    "sinTacc": false
+  },
+  {
+    "titulo": "Ravioles de calabaza",
+    "descripcion": "Ravioles rellenos de calabaza, manteca y salvia",
+    "precio": 1250,
+    "vegetariano": true,
+    "sinTacc": false
+  },
+  {
+    "titulo": "Spaghetti aglio e olio",
+    "descripcion": "Clásico con ajo, aceite de oliva y guindilla",
+    "precio": 880,
+    "vegetariano": true,
+    "sinTacc": false
+  }
+]

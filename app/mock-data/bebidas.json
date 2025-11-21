@@ -1,0 +1,72 @@
+[
+  {
+    "titulo": "Agua mineral",
+    "descripcion": "Agua mineral sin gas",
+    "precio": 200,
+    "vegetariano": true,
+    "sinTacc": true
+  },
+  {
+    "titulo": "Agua con gas",
+    "descripcion": "Agua mineral con gas",
+    "precio": 220,
+    "vegetariano": true,
+    "sinTacc": true
+  },
+  {
+    "titulo": "Gaseosa 500ml",
+    "descripcion": "Refresco clásico, botellín 500 ml",
+    "precio": 300,
+    "vegetariano": true,
+    "sinTacc": true
+  },
+  {
+    "titulo": "Jugo natural de naranja",
+    "descripcion": "Zumo exprimido al momento, sin azúcar añadida",
+    "precio": 450,
+    "vegetariano": true,
+    "sinTacc": true
+  },
+  {
+    "titulo": "Limonada casera",
+    "descripcion": "Limonada fresca con hierbas",
+    "precio": 380,
+    "vegetariano": true,
+    "sinTacc": true
+  },
+  {
+    "titulo": "Malteada de vainilla",
+    "descripcion": "Batido de helado de vainilla con leche",
+    "precio": 620,
+    "vegetariano": true,
+    "sinTacc": false
+  },
+  {
+    "titulo": "Coca zero 500ml",
+    "descripcion": "Refresco sin azúcar, botellín 500 ml",
+    "precio": 300,
+    "vegetariano": true,
+    "sinTacc": true
+  },
+  {
+    "titulo": "Cerveza artesanal",
+    "descripcion": "Botella de 330 ml, selección de la casa",
+    "precio": 750,
+    "vegetariano": true,
+    "sinTacc": true
+  },
+  {
+    "titulo": "Vino tinto copa",
+    "descripcion": "Copa de vino tinto seleccionado",
+    "precio": 850,
+    "vegetariano": true,
+    "sinTacc": true
+  },
+  {
+    "titulo": "Ginger ale",
+    "descripcion": "Refresco de jengibre, 500 ml",
+    "precio": 320,
+    "vegetariano": true,
+    "sinTacc": true
+  }
+]

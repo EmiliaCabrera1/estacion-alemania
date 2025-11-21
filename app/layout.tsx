@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { Be_Vietnam_Pro } from "next/font/google"
-import IdiomHeader from "./components/IdiomHeader";
 import "./globals.css";
 
 export const beVietnam = Be_Vietnam_Pro({
@@ -25,9 +24,7 @@ export default function RootLayout({
       <body
         className={`${beVietnam.variable} antialiased font-vietnam`}
       >
-        <main className="sm:mx-auto sm:max-w-2xl items-center relative h-dvh w-dvw">
-          <IdiomHeader />
-          <div className="my-[70px] text-center">LOGO</div>
+        <main className="sm:mx-auto sm:max-w-2xl items-center relative h-dvh w-dvw border-l-2 border-r-2 border-verde-oliva">
           {children}
         </main>
       </body>
