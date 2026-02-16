@@ -14,21 +14,23 @@ export default async function Layout({
   return (
     <div
       className="
-        min-h-dvh
-        flex flex-col
-        bg-[url('/img/fondo.svg')]
-        bg-repeat
-        relative
-      "
+    min-h-dvh
+    flex flex-col
+    bg-[url('/img/fondo.svg')]
+    bg-no-repeat
+    bg-cover
+    bg-center
+    relative
+  "
     >
       <IdiomHeader />
-      <div className="h-60 mb-5">
-        <img src="/img/logo.png" alt="Logo de la estacion" />
+      <div className="h-60 mb-5 justify-center flex items-center">
+        <img src="/img/logo.svg" alt="Logo de la estacion" />
       </div>
       <Header locale={locale} />
 
       {/* CONTENEDOR CENTRAL */}
-      <main className="flex justify-start flex-1  pb-10">
+      <main className="flex justify-center flex-1  pb-10">
         {/* TICKET */}
         <div
           className="
