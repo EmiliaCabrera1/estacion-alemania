@@ -5,20 +5,44 @@ import IdiomHeader from "../components/IdiomHeader";
 export default async function Layout({
   children,
   params,
-}: Readonly<{
+}: {
   children: React.ReactNode;
   params: Promise<{ locale: Locale }>;
-}>) {
+}) {
   const { locale } = await params;
 
-  return (<div className="flex flex-col max-h-dvh">
-    <IdiomHeader />
-    <div className="h-10 text-center text-4xl">LOGO</div>
-    <Header locale={locale} />
-    <div className="bg-[url(/img/fondo-superior.svg)] bg-cover w-full min-h-[30px]" />
-    <div className="bg-[url(/img/fondo.svg)] bg-repeat-y bg-contain overflow-y-auto">
-      {children}
+  return (
+    <div
+      className="
+        min-h-dvh
+        flex flex-col
+        bg-[url('/img/fondo.svg')]
+        bg-repeat
+        relative
+      "
+    >
+      <IdiomHeader />
+      <div className="h-60 mb-5">
+        <img src="/img/logo.png" alt="Logo de la estacion" />
+      </div>
+      <Header locale={locale} />
+
+      {/* CONTENEDOR CENTRAL */}
+      <main className="flex justify-start flex-1  pb-10">
+        {/* TICKET */}
+        <div
+          className="
+            w-full
+            max-w-[95%]
+            bg-[url('/img/fondoTicket.svg')]
+            bg-no-repeat
+            bg-top
+            bg-contain
+          "
+        >
+          {children}
+        </div>
+      </main>
     </div>
-  </div>
   );
 }
