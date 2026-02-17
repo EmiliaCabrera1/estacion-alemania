@@ -10,4 +10,5 @@ export interface MenuItem {
   vegetariano: boolean;
   sinTacc: boolean;
   onOff: boolean | null;
+  foto: string | undefined;
 }

@@ -2,7 +2,7 @@ import { NextResponse } from "next/server";
 import { google } from "googleapis";
 import type { MenuItem } from "@/Model";
 
-const SHEET_RANGE = process.env.GOOGLE_SHEET_RANGE ?? "A5:I1000";
+const SHEET_RANGE = process.env.GOOGLE_SHEET_RANGE ?? "A5:J1000";
 
 const CATEGORIAS = [
   "CAFETERIA",
@@ -59,6 +59,7 @@ function rowToMenuItem(row: (string | number | boolean)[]): MenuItem | null {
   let vegetariano = false;
   let sinTacc = false;
   let onOff: boolean | null = null;
+  let foto: string | undefined = undefined;
 
   const catIdx = cells.findIndex((c) => isCategory(c));
   if (catIdx < 0) return null;
@@ -102,6 +103,11 @@ function rowToMenuItem(row: (string | number | boolean)[]): MenuItem | null {
     }
   }
 
+  const fotoCell = cells[9];
+  if (fotoCell && fotoCell.trim().length > 0) {
+    foto = fotoCell.trim();
+  }
+
   return {
     id,
     nombre,
@@ -112,6 +118,7 @@ function rowToMenuItem(row: (string | number | boolean)[]): MenuItem | null {
     vegetariano,
     sinTacc,
     onOff,
+    foto,
   };
 }
 

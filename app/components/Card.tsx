@@ -13,6 +13,7 @@ type CardProps = {
 };
 
 export default function Card(props: CardProps) {
+  console.log(props.foto);
   return (
     <div
       className={twMerge(
@@ -25,7 +26,7 @@ export default function Card(props: CardProps) {
       <div className="flex flex-row gap-2 w-full">
         {props.foto && (
           <div className={twMerge("relative w-24 h-24 shrink-0", props?.tipo === 2 ? "order-3" : "order-1")}>
-            <Image src={props.foto} alt={props.titulo} fill className="object-cover rounded-md" />
+            <Image src={`/platos/${props.foto}`} alt={props.titulo} fill className="object-cover rounded-md" />
           </div>
         )}
         <div className={twMerge("flex flex-col flex-2", props?.tipo === 2 ? "order-2 text-right ml-auto" : "order-2 text-left mr-auto")}>

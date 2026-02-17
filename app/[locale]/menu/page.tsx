@@ -50,6 +50,7 @@ export default async function Page({
               vegetariano={dish.vegetariano}
               sinTacc={dish.sinTacc}
               tipo={index % 2 === 0 ? 1 : 2}
+              foto={dish.foto}
             />
           )}
         </section>
