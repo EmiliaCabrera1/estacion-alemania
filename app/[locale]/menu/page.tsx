@@ -17,7 +17,7 @@ export default async function Page({
   }
 
   return (
-    <div className="w-full pb-50">
+    <div className="w-full pb-60">
       {CATEGORIAS.map((categoria: Categoria) => (
         <section
           key={categoria.name}
