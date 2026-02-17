@@ -1,15 +1,32 @@
-import Card from "@/app/components/Card"
-import SectionTitle from "@/app/components/SectionTitle"
-import { mockedData } from "@/app/mock-data/mockedData"
-import { Locale } from "@/constants/locales"
-import { CATEGORIAS, Categoria, MenuItem } from "@/Model"
+import { headers } from "next/headers";
+import Card from "@/app/components/Card";
+import SectionTitle from "@/app/components/SectionTitle";
+import { Locale } from "@/constants/locales";
+import { CATEGORIAS, Categoria, MenuItem } from "@/Model";
 
+async function getMenuData(): Promise<MenuItem[]> {
+  const headersList = await headers();
+  const host = headersList.get("host") ?? "localhost:3000";
+  const protocol = headersList.get("x-forwarded-proto") ?? "http";
+  const baseUrl = `${protocol}://${host}`;
+
+  const res = await fetch(`${baseUrl}/api/menu`, {
+    next: { revalidate: 360 },
+  });
+
+  if (!res.ok) {
+    throw new Error("Failed to fetch menu");
+  }
+
+  return res.json();
+}
 
 export default async function Page({
   params,
 }: {
   params: Promise<{ locale: Locale }>;
 }) {
+  const data = await getMenuData();
   const { locale } = await params;
 
   const getDishes = (data: MenuItem[], categoria: Categoria) => {
@@ -24,7 +41,7 @@ export default async function Page({
           id={categoria.name}
         >
           <SectionTitle title={categoria[locale]} />
-          {getDishes(mockedData, categoria).map((dish, index) =>
+          {getDishes(data, categoria).map((dish, index) =>
             <Card
               key={index}
               titulo={dish.nombre}
