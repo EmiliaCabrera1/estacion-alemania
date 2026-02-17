@@ -17,26 +17,26 @@ export default async function Page({
   }
 
   return (
-    <div className="w-full">
-    {CATEGORIAS.map((categoria: Categoria) => (
-      <section
-        key={categoria.name}
-        id={categoria.name}
-      >
-        <SectionTitle />
-        {getDishes(mockedData, categoria).map((dish, index) =>
-          <Card
-            key={index}
-            titulo={dish.nombre}
-            descripcion={dish.descripcion}
-            precio={dish.precio || 0}
-            vegetariano={dish.vegetariano}
-            sinTacc={dish.sinTacc}
-            tipo={index % 2 === 0 ? 1 : 2}
-          />
-        )}
-      </section>
-    ))}
+    <div className="w-full pb-50">
+      {CATEGORIAS.map((categoria: Categoria) => (
+        <section
+          key={categoria.name}
+          id={categoria.name}
+        >
+          <SectionTitle title={categoria[locale]} />
+          {getDishes(mockedData, categoria).map((dish, index) =>
+            <Card
+              key={index}
+              titulo={dish.nombre}
+              descripcion={dish.descripcion}
+              precio={dish.precio || 0}
+              vegetariano={dish.vegetariano}
+              sinTacc={dish.sinTacc}
+              tipo={index % 2 === 0 ? 1 : 2}
+            />
+          )}
+        </section>
+      ))}
     </div>
   );
 }

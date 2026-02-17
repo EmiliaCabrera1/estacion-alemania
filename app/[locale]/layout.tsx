@@ -37,7 +37,6 @@ export default async function Layout({
               w-full
               flex flex-col
               min-h-0
-              bg-[url('/img/fondoTicket.svg')]
               bg-no-repeat
               bg-top
               bg-contain
