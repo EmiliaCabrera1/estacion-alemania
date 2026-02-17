@@ -14,24 +14,22 @@ export default async function Layout({
   const { locale } = await params;
 
   return (
-    <ScrollSpyProvider>
-      <div
-        className="
-          h-dvh
-          flex flex-col
-          bg-[url('/img/fondo.svg')]
-          bg-no-repeat
-          bg-cover
-          bg-center
-          relative
-          overflow-hidden
-        "
-      >
-        <header className="shrink-0">
-          <Header locale={locale} />
-        </header>
-        {children}
-      </div>
-    </ScrollSpyProvider>
+    <>
+      <MenuHeader locale={locale} />
+      <main className="flex justify-center flex-1 min-h-0">
+        <div
+          className="
+              w-full
+              flex flex-col
+              min-h-0
+              bg-no-repeat
+              bg-top
+              bg-contain
+            "
+        >
+          <ScrollableMenuContent>{children}</ScrollableMenuContent>
+        </div>
+      </main>
+    </>
   );
 }

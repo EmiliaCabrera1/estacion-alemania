@@ -2,7 +2,7 @@ import { headers } from "next/headers";
 import Card from "@/app/components/Card";
 import SectionTitle from "@/app/components/SectionTitle";
 import { Locale } from "@/constants/locales";
-import { CATEGORIAS, Categoria, MenuItem } from "@/Model";
+import { CATEGORIAS, Categoria, MenuItem } from "@/model";
 
 async function getMenuData(): Promise<MenuItem[]> {
   const headersList = await headers();

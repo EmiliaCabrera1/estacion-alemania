@@ -1,4 +1,4 @@
-import type { MenuItem } from "@/Model";
+import type { MenuItem } from "@/model";
 
 export const mockedData: MenuItem[] = [
   {
@@ -11,6 +11,7 @@ export const mockedData: MenuItem[] = [
     vegetariano: false,
     sinTacc: false,
     onOff: true,
+    foto: undefined,
   },
   {
     id: 2,
@@ -22,6 +23,7 @@ export const mockedData: MenuItem[] = [
     vegetariano: false,
     sinTacc: false,
     onOff: false,
+    foto: undefined,
   },
   {
     id: null,
@@ -33,6 +35,7 @@ export const mockedData: MenuItem[] = [
     vegetariano: false,
     sinTacc: false,
     onOff: null,
+    foto: undefined,
   },
   {
     id: 3,
@@ -44,6 +47,7 @@ export const mockedData: MenuItem[] = [
     vegetariano: false,
     sinTacc: false,
     onOff: null,
+    foto: undefined,
   },
   {
     id: 4,
@@ -55,6 +59,7 @@ export const mockedData: MenuItem[] = [
     vegetariano: false,
     sinTacc: false,
     onOff: null,
+    foto: undefined,
   },
   {
     id: 5,
@@ -66,6 +71,7 @@ export const mockedData: MenuItem[] = [
     vegetariano: false,
     sinTacc: false,
     onOff: null,
+    foto: undefined,
   },
   {
     id: null,
@@ -77,6 +83,7 @@ export const mockedData: MenuItem[] = [
     vegetariano: false,
     sinTacc: false,
     onOff: null,
+    foto: undefined,
   },
   {
     id: 6,
@@ -88,6 +95,7 @@ export const mockedData: MenuItem[] = [
     vegetariano: false,
     sinTacc: false,
     onOff: null,
+    foto: undefined,
   },
   {
     id: 7,
@@ -99,6 +107,7 @@ export const mockedData: MenuItem[] = [
     vegetariano: false,
     sinTacc: false,
     onOff: null,
+    foto: undefined,
   },
   {
     id: 8,
@@ -110,6 +119,7 @@ export const mockedData: MenuItem[] = [
     vegetariano: false,
     sinTacc: false,
     onOff: null,
+    foto: undefined,
   },
   {
     id: 9,
@@ -121,6 +131,7 @@ export const mockedData: MenuItem[] = [
     vegetariano: false,
     sinTacc: false,
     onOff: null,
+    foto: undefined,
   },
   {
     id: 10,
@@ -132,6 +143,7 @@ export const mockedData: MenuItem[] = [
     vegetariano: false,
     sinTacc: false,
     onOff: null,
+    foto: undefined,
   },
   {
     id: 11,
@@ -143,6 +155,7 @@ export const mockedData: MenuItem[] = [
     vegetariano: false,
     sinTacc: false,
     onOff: null,
+    foto: undefined,
   },
   {
     id: 12,
@@ -154,6 +167,7 @@ export const mockedData: MenuItem[] = [
     vegetariano: false,
     sinTacc: false,
     onOff: null,
+    foto: undefined,
   },
   {
     id: 13,
@@ -165,6 +179,7 @@ export const mockedData: MenuItem[] = [
     vegetariano: false,
     sinTacc: false,
     onOff: null,
+    foto: undefined,
   },
   {
     id: 14,
@@ -176,6 +191,7 @@ export const mockedData: MenuItem[] = [
     vegetariano: false,
     sinTacc: false,
     onOff: null,
+    foto: undefined,
   },
   {
     id: 15,
@@ -189,6 +205,7 @@ export const mockedData: MenuItem[] = [
     vegetariano: false,
     sinTacc: false,
     onOff: null,
+    foto: undefined,
   },
   {
     id: 16,
@@ -202,6 +219,7 @@ export const mockedData: MenuItem[] = [
     vegetariano: false,
     sinTacc: false,
     onOff: null,
+    foto: undefined,
   },
   {
     id: 17,
@@ -215,6 +233,7 @@ export const mockedData: MenuItem[] = [
     vegetariano: false,
     sinTacc: false,
     onOff: null,
+    foto: undefined,
   },
   {
     id: 18,
@@ -228,6 +247,7 @@ export const mockedData: MenuItem[] = [
     vegetariano: false,
     sinTacc: true,
     onOff: null,
+    foto: undefined,
   },
   {
     id: 19,
@@ -241,6 +261,7 @@ export const mockedData: MenuItem[] = [
     vegetariano: false,
     sinTacc: false,
     onOff: null,
+    foto: undefined,
   },
   {
     id: 20,
@@ -254,6 +275,7 @@ export const mockedData: MenuItem[] = [
     vegetariano: false,
     sinTacc: false,
     onOff: null,
+    foto: undefined,
   },
   {
     id: 22,
@@ -265,6 +287,7 @@ export const mockedData: MenuItem[] = [
     vegetariano: false,
     sinTacc: false,
     onOff: null,
+    foto: undefined,
   },
   {
     id: 23,
@@ -276,6 +299,7 @@ export const mockedData: MenuItem[] = [
     vegetariano: false,
     sinTacc: false,
     onOff: null,
+    foto: undefined,
   },
   {
     id: 24,
@@ -287,6 +311,7 @@ export const mockedData: MenuItem[] = [
     vegetariano: false,
     sinTacc: false,
     onOff: null,
+    foto: undefined,
   },
   {
     id: 25,
@@ -298,6 +323,7 @@ export const mockedData: MenuItem[] = [
     vegetariano: false,
     sinTacc: false,
     onOff: null,
+    foto: undefined,
   },
   {
     id: 26,
@@ -309,6 +335,7 @@ export const mockedData: MenuItem[] = [
     vegetariano: false,
     sinTacc: false,
     onOff: null,
+    foto: undefined,
   },
   {
     id: 27,
@@ -320,6 +347,7 @@ export const mockedData: MenuItem[] = [
     vegetariano: false,
     sinTacc: false,
     onOff: null,
+    foto: undefined,
   },
   {
     id: 28,
@@ -331,6 +359,7 @@ export const mockedData: MenuItem[] = [
     vegetariano: false,
     sinTacc: false,
     onOff: null,
+    foto: undefined,
   },
   {
     id: 29,
@@ -342,6 +371,7 @@ export const mockedData: MenuItem[] = [
     vegetariano: false,
     sinTacc: false,
     onOff: null,
+    foto: undefined,
   },
   {
     id: 30,
@@ -353,6 +383,7 @@ export const mockedData: MenuItem[] = [
     vegetariano: false,
     sinTacc: false,
     onOff: null,
+    foto: undefined,
   },
   {
     id: 31,
@@ -364,6 +395,7 @@ export const mockedData: MenuItem[] = [
     vegetariano: false,
     sinTacc: false,
     onOff: null,
+    foto: undefined,
   },
   {
     id: 32,
@@ -375,6 +407,7 @@ export const mockedData: MenuItem[] = [
     vegetariano: false,
     sinTacc: false,
     onOff: null,
+    foto: undefined,
   },
   {
     id: 33,
@@ -386,6 +419,7 @@ export const mockedData: MenuItem[] = [
     vegetariano: false,
     sinTacc: false,
     onOff: null,
+    foto: undefined,
   },
   {
     id: 34,
@@ -397,6 +431,7 @@ export const mockedData: MenuItem[] = [
     vegetariano: false,
     sinTacc: false,
     onOff: null,
+    foto: undefined,
   },
   {
     id: 35,
@@ -408,6 +443,7 @@ export const mockedData: MenuItem[] = [
     vegetariano: false,
     sinTacc: false,
     onOff: null,
+    foto: undefined,
   },
   {
     id: 36,
@@ -419,6 +455,7 @@ export const mockedData: MenuItem[] = [
     vegetariano: false,
     sinTacc: false,
     onOff: null,
+    foto: undefined,
   },
   {
     id: 37,
@@ -430,6 +467,7 @@ export const mockedData: MenuItem[] = [
     vegetariano: false,
     sinTacc: false,
     onOff: null,
+    foto: undefined,
   },
   {
     id: 38,
@@ -441,6 +479,7 @@ export const mockedData: MenuItem[] = [
     vegetariano: false,
     sinTacc: false,
     onOff: null,
+    foto: undefined,
   },
   {
     id: 39,
@@ -452,6 +491,7 @@ export const mockedData: MenuItem[] = [
     vegetariano: false,
     sinTacc: false,
     onOff: null,
+    foto: undefined,
   },
   {
     id: 40,
@@ -463,6 +503,7 @@ export const mockedData: MenuItem[] = [
     vegetariano: false,
     sinTacc: false,
     onOff: null,
+    foto: undefined,
   },
   {
     id: 41,
@@ -476,6 +517,7 @@ export const mockedData: MenuItem[] = [
     vegetariano: false,
     sinTacc: true,
     onOff: null,
+    foto: undefined,
   },
   {
     id: 42,
@@ -489,6 +531,7 @@ export const mockedData: MenuItem[] = [
     vegetariano: true,
     sinTacc: true,
     onOff: null,
+    foto: undefined,
   },
   {
     id: 43,
@@ -502,6 +545,7 @@ export const mockedData: MenuItem[] = [
     vegetariano: true,
     sinTacc: true,
     onOff: null,
+    foto: undefined,
   },
   {
     id: 44,
@@ -515,6 +559,7 @@ export const mockedData: MenuItem[] = [
     vegetariano: false,
     sinTacc: true,
     onOff: null,
+    foto: undefined,
   },
   {
     id: 45,
@@ -528,6 +573,7 @@ export const mockedData: MenuItem[] = [
     vegetariano: false,
     sinTacc: true,
     onOff: null,
+    foto: undefined,
   },
   {
     id: 46,
@@ -541,19 +587,7 @@ export const mockedData: MenuItem[] = [
     vegetariano: false,
     sinTacc: true,
     onOff: null,
-  },
-  {
-    id: null,
-    nombre: "Provoleta de Cabra",
-    categoria: "REGIONAL",
-    descripcion:
-      "Queso de cabra de producción local a la plancha, dorado y cremoso. Incluye guarnición de papas rústicas o ensalada clásica.",
-    description:
-      "Locally produced goat cheese, golden and creamy from the grill. Served with rustic potatoes or a classic salad.",
-    precio: null,
-    vegetariano: true,
-    sinTacc: true,
-    onOff: null,
+    foto: undefined,
   },
   {
     id: 47,
@@ -567,6 +601,7 @@ export const mockedData: MenuItem[] = [
     vegetariano: false,
     sinTacc: false,
     onOff: null,
+    foto: undefined,
   },
   {
     id: 48,
@@ -580,6 +615,7 @@ export const mockedData: MenuItem[] = [
     vegetariano: false,
     sinTacc: false,
     onOff: null,
+    foto: undefined,
   },
   {
     id: 49,
@@ -593,6 +629,7 @@ export const mockedData: MenuItem[] = [
     vegetariano: false,
     sinTacc: false,
     onOff: null,
+    foto: undefined,
   },
   {
     id: 50,
@@ -606,6 +643,7 @@ export const mockedData: MenuItem[] = [
     vegetariano: false,
     sinTacc: false,
     onOff: null,
+    foto: undefined,
   },
   {
     id: 51,
@@ -619,6 +657,7 @@ export const mockedData: MenuItem[] = [
     vegetariano: false,
     sinTacc: false,
     onOff: null,
+    foto: undefined,
   },
   {
     id: 52,
@@ -632,6 +671,7 @@ export const mockedData: MenuItem[] = [
     vegetariano: false,
     sinTacc: false,
     onOff: null,
+    foto: undefined,
   },
   {
     id: 53,
@@ -645,6 +685,7 @@ export const mockedData: MenuItem[] = [
     vegetariano: true,
     sinTacc: true,
     onOff: null,
+    foto: undefined,
   },
   {
     id: 54,
@@ -658,6 +699,7 @@ export const mockedData: MenuItem[] = [
     vegetariano: true,
     sinTacc: true,
     onOff: null,
+    foto: undefined,
   },
   {
     id: 56,
@@ -671,6 +713,7 @@ export const mockedData: MenuItem[] = [
     vegetariano: false,
     sinTacc: true,
     onOff: null,
+    foto: undefined,
   },
   {
     id: 57,
@@ -684,6 +727,7 @@ export const mockedData: MenuItem[] = [
     vegetariano: true,
     sinTacc: true,
     onOff: null,
+    foto: undefined,
   },
   {
     id: 58,
@@ -697,6 +741,7 @@ export const mockedData: MenuItem[] = [
     vegetariano: true,
     sinTacc: true,
     onOff: null,
+    foto: undefined,
   },
   {
     id: 59,
@@ -710,6 +755,7 @@ export const mockedData: MenuItem[] = [
     vegetariano: true,
     sinTacc: false,
     onOff: null,
+    foto: undefined,
   },
   {
     id: 62,
@@ -723,5 +769,6 @@ export const mockedData: MenuItem[] = [
     vegetariano: false,
     sinTacc: false,
     onOff: null,
+    foto: undefined,
   },
 ];

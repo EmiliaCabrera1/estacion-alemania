@@ -13,7 +13,6 @@ type CardProps = {
 };
 
 export default function Card(props: CardProps) {
-  console.log(props.foto);
   return (
     <div
       className={twMerge(

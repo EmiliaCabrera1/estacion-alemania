@@ -1,6 +1,6 @@
 "use client";
 
-import { CATEGORIAS, Categoria } from "@/Model";
+import { CATEGORIAS, Categoria } from "@/model";
 import { Locale } from "@/constants/locales";
 import { useScrollSpy } from "@/app/context/ScrollSpyContext";
 import { twMerge } from "tailwind-merge";

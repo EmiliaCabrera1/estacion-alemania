@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 import { google } from "googleapis";
-import type { MenuItem } from "@/Model";
+import type { MenuItem } from "@/model";
 
 const SHEET_RANGE = process.env.GOOGLE_SHEET_RANGE ?? "A5:J1000";
 
