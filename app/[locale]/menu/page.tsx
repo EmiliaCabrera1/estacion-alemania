@@ -40,12 +40,12 @@ export default async function Page({
           key={categoria.name}
           id={categoria.name}
         >
-          <SectionTitle title={categoria[locale]} />
+          <SectionTitle title={categoria[locale]} locale={locale} />
           {getDishes(data, categoria).map((dish, index) =>
             <Card
               key={index}
               titulo={dish.nombre}
-              descripcion={dish.descripcion}
+              descripcion={locale === "es" ? dish.descripcion : dish.description}
               precio={dish.precio || 0}
               vegetariano={dish.vegetariano}
               sinTacc={dish.sinTacc}
