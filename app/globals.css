@@ -2,15 +2,15 @@
 
 :root {
   --background: #ffffff;
-  --gris: #EDEDED;
-  --verde-oliva: #4E533D;
+  --gris: #404336;
+  --marron: rgba(169, 110, 57, 0.8);
 }
 
 @theme inline {
   --font-vietnam: var(--font-be-vietnam), ui-sans-serif, system-ui, sans-serif;
   --font-alumni: "Alumni Sans SC", sans-serif;
   --color-gris: var(--gris);
-  --color-verde-oliva: var(--verde-oliva);
+  --color-card: var(--marron);
   --drop-shadow-card: 0px 4px 4px rgb(0 0 0 / 0.25);
 }
 

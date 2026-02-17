@@ -1,11 +1,10 @@
 import Image from "next/image"
 
-export default function SectionTitle({ title }: { title: string }) {
+export default function SectionTitle() {
     return (<>
-        <h2 className="text-center font-alumni text-6xl">{title}</h2>
         <div className="flex flex-row justify-center gap-20 mx-auto my-5">
             <div className="flex flex-row gap-1">
-                <span className="relative w-5 h-5 drop-shadow-card text-xl">
+                <span className="relative w-5 h-5 drop-shadow-card text-xl text-gris">
                     <Image
                         src={`/icons/vegetarianoOscuro.svg`}
                         alt={`vegetariano`}
@@ -15,7 +14,7 @@ export default function SectionTitle({ title }: { title: string }) {
                 SIN TACC
             </div>
             <div className="flex flex-row gap-1">
-                <span className="relative w-5 h-5 drop-shadow-card text-xl">
+                <span className="relative w-5 h-5 drop-shadow-card text-xl text-gris">
                     <Image
                         src={`/icons/sinTaccOscuro.svg`}
                         alt={`sin tacc`}

@@ -1,36 +1,53 @@
-'use client'
+"use client";
+import React from "react";
+import Image from "next/image";
+import { useRouter } from "next/navigation";
+import { LOCALES } from "@/constants/locales";
 
-import { CATEGORIAS, Categoria } from "@/constants/categorias"
-import { Locale } from "@/constants/locales"
-import { useState } from "react"
-import { twMerge } from "tailwind-merge"
+export default function Header() {
+  const router = useRouter();
+  const [pendingLocale, setPendingLocale] = React.useState<string | null>(null);
 
-export default function Header({ locale }: { locale: Locale }) {
+  React.useEffect(() => {
+    if (!pendingLocale) return;
+    if (typeof window === "undefined") return;
 
-    const [categoriaSeleccionada, setCategoriaSeleccionada] = useState('')
-    const categorias = Object.keys(CATEGORIAS[locale])
+    document.cookie = `NEXT_LOCALE=${pendingLocale}; Path=/; Max-Age=${60 * 60 * 24 * 365}; SameSite=Lax`;
 
-    const onClick = (categoria: Categoria) => {
-        console.log("click en categoria", categoria);
-        const el = document.getElementById(categoria);
-        if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
-        setCategoriaSeleccionada(categoria)
-    };
+    const localeRegex = new RegExp(`^/(${LOCALES.join("|")})(?=/|$)`);
+    const pathname = window.location.pathname.replace(localeRegex, "");
 
+    router.replace(
+      `/${pendingLocale}${pathname}${window.location.search || ""}`,
+    );
 
-    return (
-        <div className="grid grid-rows-1 grid-cols-3 md:flex w-full justify-around flex-wrap mt-2 mb-5">
-            {categorias.map((categoria) => (
-                <button
-                    key={categoria}
-                    className={twMerge("col-span-1 text-xl text-alumniBlack capitalize",
-                        categoria === categoriaSeleccionada ? "font-bold" : "font-normal"
-                    )}
-                    onClick={() => onClick(categoria as Categoria)}
-                >
-                    {CATEGORIAS[locale][categoria as Categoria]}
-                </button>))
-            }
-        </div>
-    )
+    setPendingLocale(null);
+  }, [pendingLocale, router]);
+
+  const changeLang = (locale: string) => {
+    setPendingLocale(locale);
+  };
+
+  return (
+    <header className="flex relative">
+    <button className="absolute text-left mt-2 ml-2 w-8 h-8">
+      <Image src="/icons/home.svg" alt="Home" fill />
+    </button>
+    <div className="justify-center flex items-center pt-8 w-full h-30">
+        <Image src="/img/logo.svg" alt="Logo de la estacion" fill />
+    </div>
+    <div className="absolute gap-2 z-50 w-full text-right pt-2 pr-2">
+      {LOCALES.map((idiom) => (
+        <button
+          key={idiom}
+          onClick={() => changeLang(idiom)}
+          aria-label={`Change language to ${idiom}`}
+          className="relative w-8 h-8"
+        >
+          <Image src={`/flags/${idiom}.svg`} alt={`${idiom} flag`} fill />
+        </button>
+      ))}
+    </div>
+    </header>
+  );
 }

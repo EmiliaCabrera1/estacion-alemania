@@ -24,9 +24,7 @@ export default function RootLayout({
       <body
         className={`${beVietnam.variable} antialiased font-vietnam`}
       >
-        <main className="sm:mx-auto sm:max-w-2xl items-center relative h-dvh w-dvw border-l-2 border-r-2 border-verde-oliva">
           {children}
-        </main>
       </body>
     </html>
   );
