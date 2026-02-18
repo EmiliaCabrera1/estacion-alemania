@@ -12,7 +12,7 @@ export default async function Page({
 
   return (
     <div className="w-full overflow-y-auto pb-5">
-      <div className="-mt-[10vh] h-[30vh] w-full relative">
+      <div className="-mt-[15vh] h-[40vh] w-full relative">
         <Image
           src="/img/imgPortada.svg"
           alt="Fondo"
