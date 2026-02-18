@@ -11,7 +11,7 @@ export default async function Page({
     const { locale } = await params;
 
     return (
-        <div className="w-full">
+        <div className="w-full overflow-y-auto pb-5">
             <div className="-mt-[10vh] h-[30vh] w-full relative">
                 <Image src="/img/imgPortada.svg" alt="Fondo" fill className="object-cover" />
             </div>

@@ -14,9 +14,10 @@ export default async function Layout({
   const { locale } = await params;
 
   return (
-    <ScrollSpyProvider>
-      <div
-        className="
+    <div className="bg-gray-200">
+      <ScrollSpyProvider>
+        <div
+          className="
           h-dvh
           flex flex-col
           bg-[url('/img/fondo.svg')]
@@ -25,13 +26,18 @@ export default async function Layout({
           bg-center
           relative
           overflow-hidden
+          sm:mx-auto
+          sm:w-[400px]
+          sm:border-2
+          sm:border-gray-300
+          sm:rounded-lg
         "
-      >
-        <header className="shrink-0">
-          <Header locale={locale} />
-        </header>
-        {children}
-      </div>
-    </ScrollSpyProvider>
-  );
+        >
+          <header className="shrink-0">
+            <Header locale={locale} />
+          </header>
+          {children}
+        </div>
+      </ScrollSpyProvider>
+    </div>)
 }
