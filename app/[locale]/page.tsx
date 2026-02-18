@@ -4,22 +4,34 @@ import APP_MENU, { AppMenuItem } from "@/model/app-menu";
 import MenuLink from "../components/MenuLink";
 
 export default async function Page({
-    params,
+  params,
 }: {
-    params: Promise<{ locale: Locale }>;
+  params: Promise<{ locale: Locale }>;
 }) {
-    const { locale } = await params;
+  const { locale } = await params;
 
-    return (
-        <div className="w-full overflow-y-auto pb-5">
-            <div className="-mt-[10vh] h-[30vh] w-full relative">
-                <Image src="/img/imgPortada.svg" alt="Fondo" fill className="object-cover" />
-            </div>
-            <div className="flex flex-col gap-4">
-                {APP_MENU.map((item: AppMenuItem) => (
-                    <MenuLink key={item.id} item={item} locale={locale} type={item.id === 1 ? 1 : item.id === 7 ? 4 : item.id % 2 === 0 ? 2 : 3} />
-                ))}
-            </div>
-        </div>
-    );
+  return (
+    <div className="w-full overflow-y-auto pb-5">
+      <div className="-mt-[10vh] h-[30vh] w-full relative">
+        <Image
+          src="/img/imgPortada.svg"
+          alt="Fondo"
+          fill
+          className="object-cover"
+        />
+      </div>
+      <div className="flex flex-col gap-4">
+        {APP_MENU.map((item: AppMenuItem) => (
+          <MenuLink
+            key={item.id}
+            item={item}
+            locale={locale}
+            type={
+              item.id === 1 ? 1 : item.id === 7 ? 4 : item.id % 2 === 0 ? 2 : 3
+            }
+          />
+        ))}
+      </div>
+    </div>
+  );
 }
