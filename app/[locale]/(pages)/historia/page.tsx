@@ -1,7 +1,7 @@
 import { Locale } from "@/constants/locales";
 import Image from "next/image";
 
-const HISTORIA_CONTENT = {
+const HISTORY_CONTENT = {
   es: `En el corazón de la Quebrada de las Conchas, entre cerros rojizos y cielos interminables, la Estación Alemania permanece como un testigo silencioso de otra época. Fue fundada a comienzos del siglo XX, durante la expansión del ferrocarril en el norte argentino, cuando los rieles unían pueblos aislados y daban vida a regiones enteras.
 La estación formó parte del ramal que conectaba el Valle de Lerma con los Valles Calchaquíes, y durante décadas fue punto de paso para trabajadores, viajeros y mercaderías. Aquí llegaban trenes cargados de historias, esperanzas y despedidas, marcando el ritmo cotidiano de la quebrada.
 Con el paso del tiempo y la retirada del ferrocarril, la estación quedó en silencio, pero nunca perdió su espíritu. Hoy, rodeada por la inmensidad del paisaje, conserva la memoria de aquel movimiento y ofrece un espacio para detenerse, contemplar y disfrutar.
@@ -30,7 +30,7 @@ export default async function Page({
             height={80}
             className="float-right ml-4 mb-2"
           />
-          {HISTORIA_CONTENT[locale]}
+          {HISTORY_CONTENT[locale]}
         </p>
       </div>
       <div className="h-[30vh] w-full relative -mt-6">

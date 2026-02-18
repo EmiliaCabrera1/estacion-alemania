@@ -3,7 +3,7 @@ import type { Locale } from "@/constants/locales";
 import Link from "next/link";
 import { twMerge } from "tailwind-merge";
 
-export default function MenuLink({ item, locale, type }: { item: AppMenuItem; locale: Locale; type: 1 | 2 | 3 | 4 }) {
+export default function MenuLink({ item, locale, type, colorClass }: { item: AppMenuItem; locale: Locale; type: 1 | 2 | 3 | 4 | 5; colorClass?: string }) {
 
     const getLinkClass = () => {
         switch (type) {
@@ -19,7 +19,7 @@ export default function MenuLink({ item, locale, type }: { item: AppMenuItem; lo
     }
 
     return (
-        <Link className={twMerge("py-3 bg-card text-gris text-xl text-center", getLinkClass())} href={`/${locale}${item.url}`}>
+        <Link className={twMerge("py-3 text-gris text-xl text-center", colorClass ?? "bg-card", getLinkClass())} href={item.url.startsWith("http") ? item.url : `/${locale}${item.url}`}>
             {item[locale].toUpperCase()}
         </Link>
     );
