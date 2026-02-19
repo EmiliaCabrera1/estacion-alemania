@@ -23,14 +23,15 @@ export default async function Page({
       id: 1,
       es: "Contacto",
       en: "Contact",
-      url: "/contact",
+      url: process.env.NEXT_PUBLIC_URL_PAJARO_AGUIRRE_WHATSAPP ?? "",
     },
     {
       id: 2,
-      es: "Instagram",
-      en: "Instagram",
-      url: "https://www.instagram.com/estacionalemania/",
-    },];
+      es: "Facebook",
+      en: "Facebook",
+      url: process.env.NEXT_PUBLIC_URL_PAJARO_AGUIRRE_FACEBOOK ?? "",
+    },
+  ];
 
   return (
     <div className="w-full overflow-y-auto pb-5">

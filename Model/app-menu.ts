@@ -9,19 +9,19 @@ const APP_MENU = [
         id: 2,
         es: "Contacto",
         en: "Contact",
-        url: "/contacto",
+        url: process.env.NEXT_PUBLIC_URL_ESTACION_ALEMANIA_CONTACTO ?? "",
     },
     {
         id: 3,
         es: "Reservas",
         en: "Reservations",
-        url: "/reservas",
+        url: process.env.NEXT_PUBLIC_URL_ESTACION_ALEMANIA_RESERVA ?? "",
     },
     {
         id: 4,
         es: "Ubicacion",
         en: "Location",
-        url: "/ubicacion",
+        url: process.env.NEXT_PUBLIC_URL_MAPS ?? "",
     },
     {
         id: 5,
@@ -33,7 +33,7 @@ const APP_MENU = [
         id: 6,
         es: "Instagram",
         en: "Instagram",
-        url: "https://www.instagram.com/estacionalemania/",
+        url: process.env.NEXT_PUBLIC_URL_INSTAGRAM ?? "",
     },
     {
         id: 7,
