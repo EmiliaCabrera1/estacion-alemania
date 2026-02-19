@@ -3,7 +3,7 @@
 :root {
   --background: #ffffff;
   --gris: #404336;
-  --marron: rgba(169, 110, 57, 0.8);
+  --marron: rgba(169, 110, 57, 0.6);
 }
 
 @theme inline {
@@ -15,5 +15,5 @@
 }
 
 body {
-  font-family:  var(--font-vietnam);
+  font-family: var(--font-vietnam);
 }

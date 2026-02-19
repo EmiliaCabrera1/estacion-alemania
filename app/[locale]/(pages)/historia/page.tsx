@@ -21,23 +21,25 @@ export default async function Page({
 
   return (
     <div className="w-full overflow-y-auto pb-5">
-      <div className="w-auto relative my-3  ml-[40%]">
-        <Image src="/img/tituloHistoria.svg" alt="Historia" width={184} height={48} className="object-cover" />
-      </div>
-      <div className="flex flex-col gap-4 mt-2 mx-5 overflow-auto">
+      <div className="flex flex-col gap-4 mt-6 mx-5 overflow-auto">
         <p>
           <Image
             src="/img/imgHistoriaPeque.svg"
             alt="Historia"
-            width={150}
-            height={100}
+            width={120}
+            height={80}
             className="float-right ml-4 mb-2"
           />
           {HISTORY_CONTENT[locale]}
         </p>
       </div>
       <div className="h-[30vh] w-full relative -mt-6">
-        <Image src="/img/imgHistoria.svg" alt="Historia" fill className="object-cover" />
+        <Image
+          src="/img/imgHistoria.svg"
+          alt="Historia"
+          fill
+          className="object-cover"
+        />
       </div>
     </div>
   );

@@ -30,10 +30,13 @@ export default function Header({ locale }: { locale: Locale }) {
   };
 
   return (
-    <header className="flex relative">
-      <button className="absolute z-60 text-left mt-2 ml-2 w-8 h-8" onClick={() => {
-        router.push(`/${locale}`)
-      }}>
+    <header className="flex relative mt-4  ">
+      <button
+        className="absolute z-60 text-left mt-2 ml-2 w-8 h-8"
+        onClick={() => {
+          router.push(`/${locale}`);
+        }}
+      >
         <Image src="/icons/home.svg" alt="Home" fill />
       </button>
       <div className="justify-center flex items-center pt-8 w-full h-30">
