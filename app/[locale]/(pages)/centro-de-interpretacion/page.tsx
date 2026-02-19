@@ -14,9 +14,10 @@ A place to stop, learn, and let oneself be enveloped by history in the heart of 
 export default async function Page({
   params,
 }: {
-  params: Promise<{ locale: Locale }>;
+  params: Promise<{ locale: string }>;
 }) {
   const { locale } = await params;
+  const validLocale: Locale = locale === "es" || locale === "en" ? locale : "es";
 
   const INTERPRETATION_CENTER_MENU = [
     {
@@ -40,15 +41,15 @@ export default async function Page({
       </div>
       <div className="flex flex-col gap-4 mt-2 mx-5 overflow-auto">
         <p>
-          {INTERPRETATION_CENTER_CONTENT[locale]}
+          {INTERPRETATION_CENTER_CONTENT[validLocale]}
         </p>
       </div>
       <div className="h-[30vh] w-full relative -mt-6">
         <Image src="/img/imgCentro.svg" alt="Centro de Interpretacion" fill className="object-cover" />
       </div>
       <div className="flex flex-col gap-4">
-        <MenuLink item={INTERPRETATION_CENTER_MENU[0]} locale={locale} type={2} colorClass="bg-[rgba(146,61,58,0.8)]" />
-        <MenuLink item={INTERPRETATION_CENTER_MENU[1]} locale={locale} type={3} colorClass="bg-[rgba(146,61,58,0.8)]" />
+        <MenuLink item={INTERPRETATION_CENTER_MENU[0]} locale={validLocale} type={2} colorClass="bg-[rgba(146,61,58,0.8)]" />
+        <MenuLink item={INTERPRETATION_CENTER_MENU[1]} locale={validLocale} type={3} colorClass="bg-[rgba(146,61,58,0.8)]" />
       </div>
     </div>
   );

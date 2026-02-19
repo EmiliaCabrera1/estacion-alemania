@@ -9,9 +9,10 @@ export default async function Layout({
   params,
 }: {
   children: React.ReactNode;
-  params: Promise<{ locale: Locale }>;
+  params: Promise<{ locale: string }>;
 }) {
   const { locale } = await params;
+  const validLocale: Locale = locale === "es" || locale === "en" ? locale : "es";
 
   return (
     <div className="bg-gray-200">
@@ -34,7 +35,7 @@ export default async function Layout({
         "
         >
           <header className="shrink-0">
-            <Header locale={locale} />
+            <Header locale={validLocale} />
           </header>
           {children}
         </div>

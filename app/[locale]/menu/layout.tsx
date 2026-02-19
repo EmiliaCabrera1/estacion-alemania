@@ -9,13 +9,14 @@ export default async function Layout({
   params,
 }: {
   children: React.ReactNode;
-  params: Promise<{ locale: Locale }>;
+  params: Promise<{ locale: string }>;
 }) {
   const { locale } = await params;
+  const validLocale: Locale = locale === "es" || locale === "en" ? locale : "es";
 
   return (
     <>
-      <MenuHeader locale={locale} />
+      <MenuHeader locale={validLocale} />
       <main className="flex justify-center flex-1 min-h-0">
         <div
           className="

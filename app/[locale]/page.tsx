@@ -6,9 +6,10 @@ import MenuLink from "../components/MenuLink";
 export default async function Page({
   params,
 }: {
-  params: Promise<{ locale: Locale }>;
+  params: Promise<{ locale: string }>;
 }) {
   const { locale } = await params;
+  const validLocale: Locale = locale === "es" || locale === "en" ? locale : "es";
 
   return (
     <div className="w-full overflow-y-auto pb-5">
@@ -25,7 +26,7 @@ export default async function Page({
           <MenuLink
             key={item.id}
             item={item}
-            locale={locale}
+            locale={validLocale}
             type={
               item.id === 1 ? 1 : item.id === 7 ? 4 : item.id % 2 === 0 ? 2 : 3
             }

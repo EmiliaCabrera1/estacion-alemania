@@ -15,9 +15,10 @@ Sitting at Estación Alemania is to travel without haste, savor the present, and
 export default async function Page({
   params,
 }: {
-  params: Promise<{ locale: Locale }>;
+  params: Promise<{ locale: string }>;
 }) {
   const { locale } = await params;
+  const validLocale: Locale = locale === "es" || locale === "en" ? locale : "es";
 
   return (
     <div className="w-full overflow-y-auto pb-5">
@@ -30,7 +31,7 @@ export default async function Page({
             height={80}
             className="float-right ml-4 mb-2"
           />
-          {HISTORY_CONTENT[locale]}
+          {HISTORY_CONTENT[validLocale]}
         </p>
       </div>
       <div className="h-[30vh] w-full relative -mt-6">
