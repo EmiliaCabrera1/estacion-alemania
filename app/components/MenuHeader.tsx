@@ -15,15 +15,16 @@ export default function MenuHeader({ locale }: { locale: Locale }) {
     };
 
     return (
-        <div className="flex text-vietnam w-full justify-around mt-2 mb-5 shrink-0">
+        <div className="flex text-vietnam w-full justify-between items-center gap-0.5 px-2 mt-2 mb-5 shrink-0">
             {CATEGORIAS.map((categoria) => (
                 <button
                     key={categoria.name}
                     className={twMerge(
-                        "mx-1 capitalize text-gris transition-all duration-300 ease-out",
+                        "flex-1 min-w-0 capitalize text-gris transition-all duration-300 ease-out whitespace-nowrap text-center",
+                        "text-[clamp(0.5rem,2.5vw,0.65rem)]",
                         categoria.name === activeCategory
-                            ? "text-xl font-bold translate-y-2"
-                            : "text-sm font-normal translate-y-0",
+                            ? "font-bold text-[clamp(0.55rem,2.8vw,0.75rem)]"
+                            : "font-normal",
                     )}
                     onClick={() => onClick(categoria)}
                 >

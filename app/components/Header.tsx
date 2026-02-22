@@ -32,7 +32,7 @@ export default function Header({ locale }: { locale: Locale }) {
   return (
     <header className="flex relative mt-4  ">
       <button
-        className="absolute z-60 text-left mt-2 ml-2 w-8 h-8"
+        className="absolute z-60 text-left mt-2 ml-4 w-6 h-6"
         onClick={() => {
           router.push(`/${locale}`);
         }}
@@ -42,16 +42,18 @@ export default function Header({ locale }: { locale: Locale }) {
       <div className="justify-center flex items-center pt-8 w-full h-30">
         <Image src="/img/logo.svg" alt="Logo de la estacion" fill />
       </div>
-      <div className="absolute gap-2 z-50 w-full text-right pt-2 pr-2">
-        {LOCALES.map((idiom) => (
-          <button
-            key={idiom}
-            onClick={() => changeLang(idiom)}
-            aria-label={`Change language to ${idiom}`}
-            className="relative w-8 h-8"
-          >
-            <Image src={`/flags/${idiom}.svg`} alt={`${idiom} flag`} fill />
-          </button>
+      <div className="absolute z-50 w-full text-right pt-2 pr-4 flex justify-end items-center gap-1">
+        {LOCALES.map((idiom, index) => (
+          <React.Fragment key={idiom}>
+            {index > 0 && <span className="text-gris">|</span>}
+            <button
+              onClick={() => changeLang(idiom)}
+              aria-label={`Change language to ${idiom}`}
+              className={`text-gris text-sm font-medium hover:opacity-80 ${locale === idiom ? "underline" : ""}`}
+            >
+              {idiom.toUpperCase()}
+            </button>
+          </React.Fragment>
         ))}
       </div>
     </header>
