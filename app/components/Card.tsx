@@ -16,10 +16,11 @@ export default function Card(props: CardProps) {
   return (
     <div
       className={twMerge(
-        "flex w-[90%] bg-card text-gris drop-shadow-card mb-7 p-4 gap-4 relative",
+        "flex w-[90%] bg-card text-gris drop-shadow-card mb-7 px-4 py-2 gap-4 relative",
         props?.tipo === 2
           ? "rounded-tl-lg rounded-bl-lg ml-[10%]"
           : "rounded-tr-lg rounded-br-lg",
+        props.descripcion.length > 0 ? "mb-7" : "mb-3",
       )}
     >
       <div className="flex flex-row gap-2 w-full">
@@ -72,7 +73,7 @@ export default function Card(props: CardProps) {
           >
             {formatARS(props.precio)}
           </h4>
-          <div className="flex flex-row mt-auto gap-2 justify-end">
+          <div className={twMerge("flex flex-row mt-auto gap-2", props.tipo === 2 ? "justify-start" : "justify-end")}>
             {props.vegetariano && (
               <div className="relative flex h-4 w-4">
                 <Image

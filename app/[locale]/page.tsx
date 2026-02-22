@@ -12,26 +12,30 @@ export default async function Page({
   const validLocale: Locale = locale === "es" || locale === "en" ? locale : "es";
 
   return (
-    <div className="w-full overflow-y-auto pb-5">
-      <Image
-        src="/img/imgPortada.svg"
-        alt="Fondo"
-        width={397}
-        height={224}
-        className="w-full h-auto"
-      />
-      <div className="flex flex-col gap-4">
-        {APP_MENU.map((item: AppMenuItem) => (
-          <MenuLink
-            key={item.id}
-            item={item}
-            locale={validLocale}
-            type={
-              item.id === 1 ? 1 : item.id === 6 ? 4 : item.id % 2 === 0 ? 2 : 3
-            }
-          />
-        ))}
+    <>
+      <div className="w-full -mt-3">
+        <Image
+          src="/img/imgPortada.svg"
+          alt="Fondo"
+          width={397}
+          height={224}
+          className="w-full h-auto"
+        />
       </div>
-    </div>
+      <div className="w-full overflow-y-auto">
+        <div className="flex flex-col gap-4">
+          {APP_MENU.map((item: AppMenuItem) => (
+            <MenuLink
+              key={item.id}
+              item={item}
+              locale={validLocale}
+              type={
+                item.id === 1 ? 1 : item.id === 6 ? 1 : item.id % 2 === 0 ? 2 : 3
+              }
+            />
+          ))}
+        </div>
+      </div>
+    </>
   );
 }

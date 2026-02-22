@@ -1,12 +1,13 @@
 import type { Metadata } from "next";
-import { Be_Vietnam_Pro } from "next/font/google"
+import { Be_Vietnam_Pro } from "next/font/google";
 import "./globals.css";
+import AppLayout from "@/app/components/AppLayout";
 
 export const beVietnam = Be_Vietnam_Pro({
   weight: "400",
   subsets: ["latin"],
   variable: "--font-be-vietnam",
-})
+});
 
 export const metadata: Metadata = {
   title: "Carta Estación Alemania",
@@ -21,10 +22,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${beVietnam.variable} antialiased font-vietnam`}
-      >
-          {children}
+      <body className={`${beVietnam.variable} antialiased font-vietnam`}>
+        <AppLayout>{children}</AppLayout>
       </body>
     </html>
   );

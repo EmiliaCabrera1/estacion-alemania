@@ -36,9 +36,6 @@ export default async function Page({
 
   return (
     <div className="w-full overflow-y-auto pb-5">
-      <div className="w-auto relative my-3  ml-[40%]">
-        <Image src="/img/tituloCentro.svg" alt="Centro de Interpretacion" width={184} height={48} className="object-cover" />
-      </div>
       <div className="flex flex-col gap-4 mt-2 mx-5 overflow-auto">
         <p>
           {INTERPRETATION_CENTER_CONTENT[validLocale]}

@@ -39,9 +39,11 @@ export default function Header({ locale }: { locale: Locale }) {
       >
         <Image src="/icons/home.svg" alt="Home" fill />
       </button>
-      <div className="justify-center flex items-center pt-8 w-full h-30">
+      <button className="justify-center flex items-center pt-8 w-full h-30" onClick={() => {
+        router.push(`/${locale}`);
+      }}>
         <Image src="/img/logo.svg" alt="Logo de la estacion" fill />
-      </div>
+      </button>
       <div className="absolute z-50 w-full text-right pt-2 pr-4 flex justify-end items-center gap-1">
         {LOCALES.map((idiom, index) => (
           <React.Fragment key={idiom}>
