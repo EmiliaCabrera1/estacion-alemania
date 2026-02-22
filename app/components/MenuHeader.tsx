@@ -9,8 +9,16 @@ export default function MenuHeader({ locale }: { locale: Locale }) {
     const { activeCategory, setActiveCategory } = useScrollSpy();
 
     const onClick = (categoria: Categoria) => {
-        const el = document.getElementById(categoria.name);
-        if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
+        const container = document.querySelector<HTMLElement>("[data-menu-scroll]");
+        const section = document.getElementById(categoria.name);
+        if (container && section) {
+            const containerRect = container.getBoundingClientRect();
+            const sectionRect = section.getBoundingClientRect();
+            const scrollTop = container.scrollTop + sectionRect.top - containerRect.top - 20;
+            container.scrollTo({ top: Math.max(0, scrollTop), behavior: "smooth" });
+        } else if (section) {
+            section.scrollIntoView({ behavior: "smooth", block: "start" });
+        }
         setActiveCategory(categoria.name);
     };
 

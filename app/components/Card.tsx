@@ -16,7 +16,8 @@ export default function Card(props: CardProps) {
   return (
     <div
       className={twMerge(
-        "flex w-[90%] bg-card text-gris drop-shadow-card mb-7 px-4 py-2 gap-4 relative",
+        "flex w-[90%] bg-card text-gris shadow-[0_4px_4px_rgba(0,0,0,0.25)] mb-7 px-4 py-2 gap-4 relative",
+        "overflow-hidden isolate [-webkit-backface-visibility:hidden] [transform:translateZ(0)]",
         props?.tipo === 2
           ? "rounded-tl-lg rounded-bl-lg ml-[10%]"
           : "rounded-tr-lg rounded-br-lg",
@@ -47,12 +48,12 @@ export default function Card(props: CardProps) {
               : "order-2 text-left mr-auto",
           )}
         >
-          <h3 className={twMerge("font-medium drop-shadow-card text-[10px]")}>
+          <h3 className="font-medium text-[10px]">
             {props.titulo}
           </h3>
           <p
             className={twMerge(
-              "mt-1 text-[8px] font-normal drop-shadow-card",
+              "mt-1 text-[8px] font-normal",
               props?.tipo === 2 ? "mr-2" : "ml-2",
             )}
           >
@@ -67,7 +68,7 @@ export default function Card(props: CardProps) {
         >
           <h4
             className={twMerge(
-              "text-[10px] font-medium drop-shadow-card whitespace-nowrap",
+              "text-[10px] font-medium whitespace-nowrap",
               props.descripcion ? "my-4" : "my-0",
             )}
           >

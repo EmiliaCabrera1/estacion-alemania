@@ -17,3 +17,9 @@
 body {
   font-family: var(--font-vietnam);
 }
+
+/* Safari: smooth momentum scrolling in overflow containers */
+[data-menu-scroll] {
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
+}

@@ -39,7 +39,11 @@ export default function ScrollableMenuContent({
   }, [setActiveCategory]);
 
   return (
-    <div ref={scrollRef} className="flex-1 min-h-0 overflow-y-auto w-full">
+    <div
+      ref={scrollRef}
+      data-menu-scroll
+      className="flex-1 min-h-0 overflow-y-auto overflow-x-hidden w-full"
+    >
       {children}
     </div>
   );
