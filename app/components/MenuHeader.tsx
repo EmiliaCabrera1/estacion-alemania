@@ -4,41 +4,77 @@ import { CATEGORIAS, Categoria } from "@/model";
 import { Locale } from "@/constants/locales";
 import { useScrollSpy } from "@/app/context/ScrollSpyContext";
 import { twMerge } from "tailwind-merge";
+import Image from "next/image";
 
 export default function MenuHeader({ locale }: { locale: Locale }) {
-    const { activeCategory, setActiveCategory } = useScrollSpy();
+  const { activeCategory, setActiveCategory } = useScrollSpy();
 
-    const onClick = (categoria: Categoria) => {
-        const container = document.querySelector<HTMLElement>("[data-menu-scroll]");
-        const section = document.getElementById(categoria.name);
-        if (container && section) {
-            const containerRect = container.getBoundingClientRect();
-            const sectionRect = section.getBoundingClientRect();
-            const scrollTop = container.scrollTop + sectionRect.top - containerRect.top - 20;
-            container.scrollTo({ top: Math.max(0, scrollTop), behavior: "smooth" });
-        } else if (section) {
-            section.scrollIntoView({ behavior: "smooth", block: "start" });
-        }
-        setActiveCategory(categoria.name);
-    };
+  const onClick = (categoria: Categoria) => {
+    const container = document.querySelector<HTMLElement>("[data-menu-scroll]");
+    const section = document.getElementById(categoria.name);
+    if (container && section) {
+      const containerRect = container.getBoundingClientRect();
+      const sectionRect = section.getBoundingClientRect();
+      const scrollTop =
+        container.scrollTop + sectionRect.top - containerRect.top - 20;
+      container.scrollTo({ top: Math.max(0, scrollTop), behavior: "smooth" });
+    } else if (section) {
+      section.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+    setActiveCategory(categoria.name);
+  };
 
-    return (
-        <div className="flex text-vietnam w-full justify-between items-center gap-0.5 px-2 mt-2 mb-5 shrink-0">
-            {CATEGORIAS.map((categoria) => (
-                <button
-                    key={categoria.name}
-                    className={twMerge(
-                        "flex-1 min-w-0 capitalize text-gris transition-all duration-300 ease-out whitespace-nowrap text-center",
-                        "text-[clamp(0.5rem,2.5vw,0.65rem)]",
-                        categoria.name === activeCategory
-                            ? "font-bold text-[clamp(0.55rem,2.8vw,0.75rem)]"
-                            : "font-normal",
-                    )}
-                    onClick={() => onClick(categoria)}
-                >
-                    {categoria[locale]}
-                </button>
-            ))}
+  const sinTaccLabel = locale === "en" ? "No TACC" : "Sin TACC";
+  const vegetarianoLabel = locale === "en" ? "Vegetarian" : "Vegetariano";
+
+  return (
+    <>
+      <div className="flex justify-evenly text-vietnam w-full shrink-0 px-10 ">
+        {CATEGORIAS.slice(0, 3).map((categoria) => (
+          <button
+            key={categoria.name}
+            className={twMerge(
+              "capitalize text-gris transition-all duration-300 ease-out text-center",
+              categoria.name === activeCategory ? "font-bold" : "font-normal",
+            )}
+            onClick={() => onClick(categoria)}
+          >
+            {categoria[locale]}
+          </button>
+        ))}
+      </div>
+      <div className="flex justify-evenly text-vietnam w-full shrink-0">
+        {CATEGORIAS.slice(3).map((categoria) => (
+          <button
+            key={categoria.name}
+            className={twMerge(
+              "capitalize text-gris transition-all duration-300 ease-out text-center",
+              categoria.name === activeCategory ? "font-bold" : "font-normal",
+            )}
+            onClick={() => onClick(categoria)}
+          >
+            {categoria[locale]}
+          </button>
+        ))}
+      </div>
+      <div className="flex flex-row justify-center gap-20 mx-auto  my-3">
+        <div className="flex flex-row gap-1 text-base">
+          <span className="relative w-4 h-4 drop-shadow-card text-lg text-gris my-auto">
+            <Image
+              src={`/icons/vegetarianoOscuro.svg`}
+              alt={vegetarianoLabel}
+              fill
+            />
+          </span>
+          {sinTaccLabel}
         </div>
-    );
+        <div className="flex flex-row gap-1">
+          <span className="relative w-4 h-4 drop-shadow-card text-xl text-gris my-auto">
+            <Image src={`/icons/sinTaccOscuro.svg`} alt={sinTaccLabel} fill />
+          </span>
+          {vegetarianoLabel}
+        </div>
+      </div>
+    </>
+  );
 }

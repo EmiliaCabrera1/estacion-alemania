@@ -9,11 +9,12 @@ export default async function Page({
   params: Promise<{ locale: string }>;
 }) {
   const { locale } = await params;
-  const validLocale: Locale = locale === "es" || locale === "en" ? locale : "es";
+  const validLocale: Locale =
+    locale === "es" || locale === "en" ? locale : "es";
 
   return (
     <>
-      <div className="w-full -mt-3">
+      <div className="w-full -mt-2 ">
         <Image
           src="/img/imgPortada.svg"
           alt="Fondo"
@@ -22,15 +23,21 @@ export default async function Page({
           className="w-full h-auto"
         />
       </div>
-      <div className="w-full overflow-y-auto">
-        <div className="flex flex-col gap-4">
+      <div className="w-full overflow-y-auto ">
+        <div className="flex flex-col gap-2 ">
           {APP_MENU.map((item: AppMenuItem) => (
             <MenuLink
               key={item.id}
               item={item}
               locale={validLocale}
               type={
-                item.id === 1 ? 1 : item.id === 6 ? 1 : item.id % 2 === 0 ? 2 : 3
+                item.id === 1
+                  ? 1
+                  : item.id === 6
+                    ? 1
+                    : item.id % 2 === 0
+                      ? 2
+                      : 3
               }
             />
           ))}

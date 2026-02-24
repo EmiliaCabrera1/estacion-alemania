@@ -39,9 +39,12 @@ export default function Header({ locale }: { locale: Locale }) {
       >
         <Image src="/icons/home.svg" alt="Home" fill />
       </button>
-      <button className="justify-center flex items-center pt-8 w-full h-30" onClick={() => {
-        router.push(`/${locale}`);
-      }}>
+      <button
+        className="justify-center flex items-center pt-8 w-full h-30 mb-3"
+        onClick={() => {
+          router.push(`/${locale}`);
+        }}
+      >
         <Image src="/img/logo.svg" alt="Logo de la estacion" fill />
       </button>
       <div className="absolute z-50 w-full text-right pt-2 pr-4 flex justify-end items-center gap-1">

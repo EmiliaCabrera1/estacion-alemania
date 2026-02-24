@@ -36,7 +36,7 @@ export default function Card(props: CardProps) {
               src={`/platos/${props.foto}`}
               alt={props.titulo}
               fill
-              className="object-contain "
+              className="object-contain mt-2"
             />
           </div>
         )}
@@ -48,12 +48,10 @@ export default function Card(props: CardProps) {
               : "order-2 text-left mr-auto",
           )}
         >
-          <h3 className="font-medium text-[10px]">
-            {props.titulo}
-          </h3>
+          <h3 className="font-medium text-[15px]">{props.titulo}</h3>
           <p
             className={twMerge(
-              "mt-1 text-[8px] font-normal",
+              "mt-1 text-[12px] font-light",
               props?.tipo === 2 ? "mr-2" : "ml-2",
             )}
           >
@@ -68,13 +66,18 @@ export default function Card(props: CardProps) {
         >
           <h4
             className={twMerge(
-              "text-[10px] font-medium whitespace-nowrap",
+              "text-[12px] font-normal whitespace-nowrap",
               props.descripcion ? "my-4" : "my-0",
             )}
           >
             {formatARS(props.precio)}
           </h4>
-          <div className={twMerge("flex flex-row mt-auto gap-2", props.tipo === 2 ? "justify-start" : "justify-end")}>
+          <div
+            className={twMerge(
+              "flex flex-row mt-auto gap-2",
+              props.tipo === 2 ? "justify-start" : "justify-end",
+            )}
+          >
             {props.vegetariano && (
               <div className="relative flex h-4 w-4">
                 <Image
