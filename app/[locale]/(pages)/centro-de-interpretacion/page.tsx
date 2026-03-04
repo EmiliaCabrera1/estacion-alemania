@@ -21,12 +21,6 @@ export default async function Page({
 
   const INTERPRETATION_CENTER_MENU = [
     {
-      id: 1,
-      es: "Contacto",
-      en: "Contact",
-      url: process.env.NEXT_PUBLIC_URL_PAJARO_AGUIRRE_WHATSAPP ?? "",
-    },
-    {
       id: 2,
       es: "Facebook",
       en: "Facebook",
@@ -45,8 +39,7 @@ export default async function Page({
         <Image src="/img/imgCentro.svg" alt="Centro de Interpretacion" fill className="object-cover" />
       </div>
       <div className="flex flex-col gap-4">
-        <MenuLink item={INTERPRETATION_CENTER_MENU[0]} locale={validLocale} type={2} colorClass="bg-[rgba(146,61,58,0.8)]" />
-        <MenuLink item={INTERPRETATION_CENTER_MENU[1]} locale={validLocale} type={3} colorClass="bg-[rgba(146,61,58,0.8)]" />
+        <MenuLink item={INTERPRETATION_CENTER_MENU[0]} locale={validLocale} type={3} colorClass="bg-[rgba(146,61,58,0.8)]" />
       </div>
     </div>
   );

@@ -2,7 +2,7 @@ import { NextResponse } from "next/server";
 import { google } from "googleapis";
 import type { MenuItem } from "@/model";
 
-const SHEET_RANGE = process.env.GOOGLE_SHEET_RANGE ?? "A5:J1000";
+const SHEET_RANGE = process.env.GOOGLE_SHEET_RANGE ?? "A5:K1000";
 
 const CATEGORIAS = [
   "CAFETERIA",
@@ -52,6 +52,7 @@ function rowToMenuItem(row: (string | number | boolean)[]): MenuItem | null {
 
   let id: number | null = null;
   let nombre = "";
+  let name = "";
   let categoria = "CAFETERIA" as (typeof CATEGORIAS)[number];
   let descripcion = "";
   let description = "";
@@ -65,7 +66,12 @@ function rowToMenuItem(row: (string | number | boolean)[]): MenuItem | null {
   if (catIdx < 0) return null;
 
   categoria = cells[catIdx].toUpperCase() as (typeof CATEGORIAS)[number];
-  nombre = (cells[catIdx - 1] ?? "").trim();
+  if (catIdx >= 2) {
+    nombre = (cells[catIdx - 2] ?? "").trim();
+    name = (cells[catIdx - 1] ?? "").trim();
+  } else {
+    nombre = (cells[catIdx - 1] ?? "").trim();
+  }
   if (!nombre) return null;
 
   if (catIdx >= 1 && /^\d+$/.test(cells[0] ?? "")) {
@@ -103,7 +109,7 @@ function rowToMenuItem(row: (string | number | boolean)[]): MenuItem | null {
     }
   }
 
-  const fotoCell = cells[9];
+  const fotoCell = cells[10];
   if (fotoCell && fotoCell.trim().length > 0) {
     foto = fotoCell.trim();
   }
@@ -111,6 +117,7 @@ function rowToMenuItem(row: (string | number | boolean)[]): MenuItem | null {
   return {
     id,
     nombre,
+    name,
     categoria,
     descripcion,
     description,

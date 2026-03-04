@@ -35,7 +35,7 @@ export default function MenuLink({
   return (
     <Link
       className={twMerge(
-        "py-2 text-gris text-lg text-center",
+        "py-2 text-gris text-lg text-center font-titulos",
         colorClass ?? "bg-card",
         getLinkClass(),
       )}

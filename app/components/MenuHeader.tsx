@@ -28,14 +28,14 @@ export default function MenuHeader({ locale }: { locale: Locale }) {
   const vegetarianoLabel = locale === "en" ? "Vegetarian" : "Vegetariano";
 
   return (
-    <>
-      <div className="flex justify-evenly text-vietnam w-full shrink-0 px-10 ">
+    <header className="flex flex-col gap-2 font-titulos text-[clamp(0.7rem,2.2vw+0.5rem,1rem)]">
+      <div className="flex justify-evenly w-full shrink-0 px-4 min-[400px]:px-10">
         {CATEGORIAS.slice(0, 3).map((categoria) => (
           <button
             key={categoria.name}
             className={twMerge(
               "capitalize text-gris transition-all duration-300 ease-out text-center",
-              categoria.name === activeCategory ? "font-bold" : "font-normal",
+              categoria.name === activeCategory ? "font-bold" : "font-medium",
             )}
             onClick={() => onClick(categoria)}
           >
@@ -43,13 +43,13 @@ export default function MenuHeader({ locale }: { locale: Locale }) {
           </button>
         ))}
       </div>
-      <div className="flex justify-evenly text-vietnam w-full shrink-0">
+      <div className="flex justify-evenly w-full shrink-0">
         {CATEGORIAS.slice(3).map((categoria) => (
           <button
             key={categoria.name}
             className={twMerge(
               "capitalize text-gris transition-all duration-300 ease-out text-center",
-              categoria.name === activeCategory ? "font-bold" : "font-normal",
+              categoria.name === activeCategory ? "font-bold" : "font-medium",
             )}
             onClick={() => onClick(categoria)}
           >
@@ -75,6 +75,6 @@ export default function MenuHeader({ locale }: { locale: Locale }) {
           {vegetarianoLabel}
         </div>
       </div>
-    </>
+    </header>
   );
 }

@@ -24,7 +24,7 @@ export default async function Page({
         />
       </div>
       <div className="w-full overflow-y-auto ">
-        <div className="flex flex-col gap-2 ">
+        <div className="flex flex-col gap-2 font-titulos">
           {APP_MENU.map((item: AppMenuItem) => (
             <MenuLink
               key={item.id}

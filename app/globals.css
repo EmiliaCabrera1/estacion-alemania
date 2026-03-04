@@ -1,21 +1,26 @@
+@import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&display=swap");
 @import "tailwindcss";
 
 :root {
   --background: #ffffff;
-  --gris: #404336;
-  --marron: rgba(169, 110, 57, 0.6);
+  --gris: rgba(20, 20, 20, 1);
+  --marron: rgba(78, 83, 61, 0.8);
 }
 
 @theme inline {
-  --font-vietnam: var(--font-be-vietnam), ui-sans-serif, system-ui, sans-serif;
-  --font-alumni: "Alumni Sans SC", sans-serif;
+  --font-cuerpo: var(--font-be-vietnam), ui-sans-serif, system-ui, sans-serif;
+  --font-titulos: var(--font-cinzel), serif;
   --color-gris: var(--gris);
   --color-card: var(--marron);
   --drop-shadow-card: 0px 4px 4px rgb(0 0 0 / 0.25);
 }
 
 body {
-  font-family: var(--font-vietnam);
+  font-family: var(--font-cuerpo);
+}
+
+.font-titulos {
+  font-family: var(--font-cinzel), "Cinzel", serif;
 }
 
 /* Safari: smooth momentum scrolling in overflow containers */

@@ -13,10 +13,11 @@ type CardProps = {
 };
 
 export default function Card(props: CardProps) {
+
   return (
     <div
       className={twMerge(
-        "flex w-[90%] bg-card text-gris shadow-[0_4px_4px_rgba(0,0,0,0.25)] mb-7 px-4 py-2 gap-4 relative",
+        "flex w-[90%] text-[18px] bg-card text-black shadow-[0_4px_4px_rgba(0,0,0,0.25)] mb-7 px-4 py-2 gap-4 relative",
         "overflow-hidden isolate [-webkit-backface-visibility:hidden] [transform:translateZ(0)]",
         props?.tipo === 2
           ? "rounded-tl-lg rounded-bl-lg ml-[10%]"
@@ -29,7 +30,7 @@ export default function Card(props: CardProps) {
           <div
             className={twMerge(
               "relative w-20 h-20 shrink-0  ",
-              props?.tipo === 2 ? "order-3" : "order-1",
+              "order-1",
             )}
           >
             <Image
@@ -43,16 +44,14 @@ export default function Card(props: CardProps) {
         <div
           className={twMerge(
             "flex flex-col flex-2",
-            props?.tipo === 2
-              ? "order-2 text-right ml-auto"
-              : "order-2 text-left mr-auto",
+            "order-2 text-left mr-auto",
           )}
         >
-          <h3 className="font-medium text-[15px]">{props.titulo}</h3>
+          <h3 className="font-medium font-titulos">{props.titulo}</h3>
           <p
             className={twMerge(
               "mt-1 text-[12px] font-light",
-              props?.tipo === 2 ? "mr-2" : "ml-2",
+              "ml-2",
             )}
           >
             {props.descripcion}
@@ -61,12 +60,12 @@ export default function Card(props: CardProps) {
         <div
           className={twMerge(
             "flex flex-col",
-            props?.tipo === 2 ? "order-1" : "order-3",
+            "order-3",
           )}
         >
           <h4
             className={twMerge(
-              "text-[12px] font-normal whitespace-nowrap",
+              "text-[15px] font-normal whitespace-nowrap",
               props.descripcion ? "my-4" : "my-0",
             )}
           >
@@ -75,11 +74,11 @@ export default function Card(props: CardProps) {
           <div
             className={twMerge(
               "flex flex-row mt-auto gap-2",
-              props.tipo === 2 ? "justify-start" : "justify-end",
+              "justify-end",
             )}
           >
             {props.vegetariano && (
-              <div className="relative flex h-4 w-4">
+              <div className="relative flex h-5 w-5">
                 <Image
                   src="/icons/vegetarianoOscuro.svg"
                   alt="vegetariano"
@@ -88,7 +87,7 @@ export default function Card(props: CardProps) {
               </div>
             )}
             {props.sinTacc && (
-              <div className="relative h-4 w-4">
+              <div className="relative h-5 w-5">
                 <Image src="/icons/sinTaccOscuro.svg" alt="sin tacc" fill />
               </div>
             )}

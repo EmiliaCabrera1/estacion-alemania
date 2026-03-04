@@ -12,7 +12,7 @@ async function getMenuData(): Promise<MenuItem[]> {
   const baseUrl = `${protocol}://${host}`;
 
   const res = await fetch(`${baseUrl}/api/menu`, {
-    next: { revalidate: 360 },
+    next: { revalidate: 180 },
   });
 
   if (!res.ok) {
@@ -46,7 +46,7 @@ export default async function Page({
           {getDishes(data, categoria).map((dish, index) =>
             <Card
               key={index}
-              titulo={dish.nombre}
+              titulo={validLocale === "en" && dish.name ? dish.name : dish.nombre}
               descripcion={validLocale === "es" ? dish.descripcion : dish.description}
               precio={dish.precio || 0}
               vegetariano={dish.vegetariano}
