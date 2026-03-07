@@ -13,24 +13,30 @@ const APP_MENU = [
   },
   {
     id: 3,
+    es: "Reserva y Eventos",
+    en: "Reservations and Events",
+    url: process.env.NEXT_PUBLIC_URL_ESTACION_ALEMANIA_CONTACTO ?? "",
+  },
+  {
+    id: 4,
     es: "Ubicacion",
     en: "Location",
     url: process.env.NEXT_PUBLIC_URL_MAPS ?? "",
   },
   {
-    id: 4,
+    id: 5,
     es: "Historia",
     en: "History",
     url: "/historia",
   },
   {
-    id: 5,
+    id: 6,
     es: "Instagram",
     en: "Instagram",
     url: process.env.NEXT_PUBLIC_URL_ESTACION_ALEMANIA_INSTAGRAM ?? "",
   },
   {
-    id: 6,
+    id: 7,
     es: "Centro de Interpretacion",
     en: "Interpretation Center",
     url: "/centro-de-interpretacion",

@@ -12,7 +12,7 @@ export default function MenuLink({
 }: {
   item: AppMenuItem;
   locale: Locale;
-  type: 1 | 2 | 3 | 4 | 5;
+  type: 1 | 2 | 3 | 4 | 5 | 6;
   colorClass?: string;
 }) {
   const href = item.url.startsWith("http")

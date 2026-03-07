@@ -33,7 +33,7 @@ export default async function Page({
               type={
                 item.id === 1
                   ? 1
-                  : item.id === 6
+                  : item.id === 7
                     ? 1
                     : item.id % 2 === 0
                       ? 2
